@@ -32,7 +32,7 @@
 (defn update-font-size
   "Updates the font size by adding increment to it"
   [s increment]
-  (update s 2
+  (update-font s 2
     (comp #(+ % increment) #(java.lang.Double/parseDouble %))))
 
 (def font-prefs-keys
