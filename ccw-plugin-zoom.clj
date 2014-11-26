@@ -37,7 +37,7 @@
     (when-let [font-data (first (.getFontData font-registry pref-key))] ;; FIXME what if font-data count > 1 ? What does that mean?
       (let [new-font-data (org.eclipse.swt.graphics.FontData. (str font-data))
             fds (str (doto new-font-data
-                       (.setHeight (float (+ increment (.getHeight new-font-data)))))
+                       (.setHeight (float (+ increment (.getHeight font-data)))))
                   ";")] ;; ";" part of the encoding
         (e/preference! "org.eclipse.ui.workbench" pref-key fds))))))
 
