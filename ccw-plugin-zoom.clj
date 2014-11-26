@@ -44,10 +44,28 @@
 (defn zoom-in-hdl [context] (zoomer font-increment-step context))
 (defn zoom-out-hdl [context] (zoomer (- font-increment-step) context))
 
+;; NOTE concerning the handlers:
+;; we do not use the default "org.eclipse.ui.context.window" keybinding context
+;; because we would conflict with pre-existing keybindings of the Eclipse Platform.
+;; Instead we define the keybinding for more specific contexts, which means
+;; that in editors or repls, our keybinding will win and our zoom/unzoom handlers will
+;; be triggered.
+;;
+;; ALSO, we overload the binding both for azerty and qwerty keyboards, that's why
+;; zoom-in is both bound to "Ctrl++" (qwerty keyboards) and "Ctrl+=" (azerty keyboards)
+
 (defcommand zoom-in "Zoom: increase the fonts size (editors, repls, etc.)")
 (defhandler zoom-in zoom-in-hdl)
-(defkeybinding zoom-in "Alt+U Z")
+
+(defkeybinding zoom-in "Ctrl++" :context "org.eclipse.ui.textEditorScope")
+(defkeybinding zoom-in "Ctrl++" :context "ccw.ui.contextRepl")
+(defkeybinding zoom-in "Ctrl+=" :context "org.eclipse.ui.textEditorScope")
+(defkeybinding zoom-in "Ctrl+=" :context "ccw.ui.contextRepl")
+
 
 (defcommand zoom-out "Unzoom: decrease the fonts size (editors, repls, etc.)")
 (defhandler zoom-out zoom-out-hdl)
-(defkeybinding zoom-out "Alt+U U")
+
+(defkeybinding zoom-in "Ctrl+-" :context "org.eclipse.ui.textEditorScope")
+(defkeybinding zoom-in "Ctrl+-" :context "ccw.ui.contextRepl")
+
