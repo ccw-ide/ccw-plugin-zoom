@@ -38,7 +38,7 @@
       (let [new-font-data (org.eclipse.swt.graphics.FontData. (str font-data))
             fds (str (doto new-font-data
                        (.setHeight (float (+ increment (.getHeight new-font-data)))))
-                  ";")] ;; FIXME is this ";" really mandatory ?
+                  ";")] ;; ";" part of the encoding
         (e/preference! "org.eclipse.ui.workbench" pref-key fds))))))
 
 (defn zoom-in-hdl [context] (zoomer font-increment-step context))
