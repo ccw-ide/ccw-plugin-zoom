@@ -22,8 +22,8 @@ It is recommended to layout User Plugins inside this folder by mirroring Github'
 
 ## Usage
 
-- Use 'Alt+U Z' for increasing the fonts size (Zooming)
-- Use 'Alt+U U' for decreasing the fonts size (Unzooming)
+- Use 'Cmd++' on OS X, 'Ctrl++' on Windows/Linux for increasing the fonts size (Zooming)
+- Use 'Cmd+-' on OS X, 'Ctrl+-' on Windows/Linux for decreasing the fonts size (Unzooming)
 
 ## License
 
