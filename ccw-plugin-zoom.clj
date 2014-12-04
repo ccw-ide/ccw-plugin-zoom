@@ -27,9 +27,8 @@
 
 (defn zoomer
   "Adds increment to font sizes"
-  [increment context]
-  (let [font-registry (-> context
-                        (m/context-key org.eclipse.ui.IWorkbench)
+  [increment {:keys [workbench]}]
+  (let [font-registry (-> workbench
                         .getThemeManager
                         .getCurrentTheme
                         .getFontRegistry)]
@@ -58,9 +57,7 @@
 (defkeybinding zoom-in "Cmd+=" :context :text-editor)
 (defkeybinding zoom-in "Cmd+=" :context :repl)
 
-
 (defcommand zoom-out "Unzoom: decrease the fonts size (editors, repls, etc.)")
 (defhandler zoom-out (partial zoomer (- font-increment-step)))
 (defkeybinding zoom-out "Cmd+-" :context :text-editor)
 (defkeybinding zoom-out "Cmd+-" :context :repl)
-
