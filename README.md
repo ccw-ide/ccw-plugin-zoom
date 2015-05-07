@@ -25,6 +25,10 @@ It is recommended to layout User Plugins inside this folder by mirroring Github'
 - Use 'Cmd++' on OS X, 'Ctrl++' on Windows/Linux for increasing the fonts size (Zooming)
 - Use 'Cmd+-' on OS X, 'Ctrl+-' on Windows/Linux for decreasing the fonts size (Unzooming)
 
+## Uninstall
+
+To uninstall a User plugin, simply remove its directory. At the next Eclipse/Counterclockwise restart, it'll be gone.
+
 ## License
 
 Copyright © 2009-2015 Laurent Petit
