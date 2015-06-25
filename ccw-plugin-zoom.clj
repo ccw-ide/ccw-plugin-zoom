@@ -18,11 +18,32 @@
   "Eclipse font preferences keys we want to increment/decrement altogether"
   [
    "org.eclipse.jface.textfont"
-   "org.eclipse.debug.ui.VariableTextFont"
+   "org.eclipse.jface.bannerfont"
    "org.eclipse.jface.dialogfont"
-   ; "org.eclipse.ui.workbench.TAB_TEXT_FONT"
-   ; "org.eclipse.ui.workbench.VIEW_MESSAGE_TEXT_FONT"
+   "org.eclipse.jface.headerfont"
+
+   "org.eclipse.ui.workbench.VIEW_MESSAGE_TEXT_FONT"
+   "org.eclipse.ui.workbench.TAB_TEXT_FONT"
    "org.eclipse.ui.workbench.texteditor.blockSelectionModeFont"
+
+   "org.eclipse.debug.ui.VariableTextFont"
+
+   "org.eclipse.compare.contentmergeviewer.TextMergeViewer"
+
+   ; "org.eclipse.team.cvs.ui.fontsandcolors.ignored_resource_font"
+   ; "org.eclipse.team.cvs.ui.fontsandcolors.outgoing_change_font"
+
+   ; "org.eclipse.egit.ui.UncommittedChangeFont"
+
+   "org.eclipse.jdt.ui.editors.textfont"
+   "org.eclipse.jdt.ui.javadocfont"
+   "org.eclipse.jdt.ui.PropertiesFileEditor.textfont"
+
+   "org.eclipse.jdt.junit.failurePaneFont"
+
+   "org.eclipse.wst.sse.ui.textfont"
+
+   "org.eclipse.xtend.ui.editors.textfont"
   ])
 
 (defn zoomer
